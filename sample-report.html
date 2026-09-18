@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PE analysis — suspicious.exe</title>
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; padding:32px 16px; background:#0d1117; color:#c9d1d9;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.55; }
+  .wrap { max-width:940px; margin:0 auto; }
+  h1 { font-size:21px; margin:0 0 4px; color:#e6edf3; }
+  h2 { font-size:15px; color:#0ea5e9; margin:30px 0 10px; padding-bottom:6px;
+    border-bottom:1px solid #21262d; text-transform:uppercase;
+    letter-spacing:.7px; }
+  .sub { color:#8b949e; font-size:13.5px; margin-bottom:22px; }
+  .verdict { display:inline-block; padding:3px 12px; border-radius:6px;
+    font-weight:700; font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid #21262d; }
+  th { color:#8b949e; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.5px; border-bottom:1px solid #30363d; }
+  code,.mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:8px 24px; font-size:13.5px; }
+  .kv { display:flex; justify-content:space-between; gap:12px;
+    border-bottom:1px solid #161b22; padding:5px 0; }
+  .kv span:first-child { color:#8b949e; }
+  .finding { border-left:3px solid; padding:8px 14px; margin-bottom:8px;
+    background:#161b22; border-radius:0 6px 6px 0; }
+  .finding .rule { font-weight:700; font-size:13px; }
+  .finding .score { float:right; color:#8b949e; font-size:12px; }
+  .finding .detail { font-size:13px; color:#8b949e; margin-top:3px; }
+  .ent-high { color:#f85149; font-weight:600; }
+  .ent-med { color:#d29922; }
+  footer { margin-top:34px; padding-top:14px; border-top:1px solid #21262d;
+    color:#6e7681; font-size:12.5px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PE Analysis Report</h1>
+  <div class="sub"><span class="mono">suspicious.exe</span> · 39,424 bytes · 18 Sep 2026 05:51 UTC</div>
+  <div class="verdict" style="background:#f8514922;color:#f85149;
+    border:1px solid #f8514955">LIKELY MALICIOUS</div>
+  <span style="margin-left:10px;color:#8b949e;font-size:13px">score 293</span>
+
+  <h2>Headers</h2>
+  <div class="grid"><div class="kv"><span>Type</span><span class="mono">Executable</span></div><div class="kv"><span>Format</span><span class="mono">PE32 (32-bit)</span></div><div class="kv"><span>Machine</span><span class="mono">x86 (32-bit)</span></div><div class="kv"><span>Subsystem</span><span class="mono">Windows Console</span></div><div class="kv"><span>Entry point</span><span class="mono">0x00001000</span></div><div class="kv"><span>Image base</span><span class="mono">0x00400000</span></div><div class="kv"><span>Compiled</span><span class="mono">unset</span></div><div class="kv"><span>Signed</span><span class="mono">no</span></div><div class="kv"><span>Sections</span><span class="mono">4</span></div><div class="kv"><span>Overlay</span><span class="mono">24,576 B</span></div></div>
+
+  <h2>Sections</h2>
+  <table>
+    <thead><tr><th>Name</th><th>Virtual address</th><th>Raw size</th>
+      <th>Entropy</th><th>Flags</th></tr></thead>
+    <tbody><tr><td class="mono">UPX0</td><td class="mono">0x00001000</td><td>8,192</td><td class="ent-high">7.98</td><td class="mono" style="font-size:11.5px">CODE/EXECUTABLE/READ/WRITE <span style="color:#f85149;font-weight:700">W+X</span></td></tr><tr><td class="mono">.text</td><td class="mono">0x00003000</td><td>512</td><td class="">0.19</td><td class="mono" style="font-size:11.5px">CODE/EXECUTABLE/READ</td></tr><tr><td class="mono">.txt</td><td class="mono">0x00004000</td><td>1,024</td><td class="">2.85</td><td class="mono" style="font-size:11.5px">INITIALIZED_DATA/READ/WRITE</td></tr><tr><td class="mono">.idata</td><td class="mono">0x00005000</td><td>4,096</td><td class="">0.84</td><td class="mono" style="font-size:11.5px">INITIALIZED_DATA/READ</td></tr></tbody>
+  </table>
+
+  <h2>Imports (2 DLLs · 16 functions)</h2>
+  <table>
+    <thead><tr><th>DLL</th><th>Functions</th><th>Count</th></tr></thead>
+    <tbody><tr><td class="mono">KERNEL32.dll</td><td class="mono" style="font-size:11.5px;color:#8b949e">VirtualAllocEx, WriteProcessMemory, CreateRemoteThread, IsDebuggerPresent, CheckRemoteDebuggerPresent, WinExec, ShellExecuteA, InternetOpenA … +4 more</td><td>12</td></tr><tr><td class="mono">ADVAPI32.dll</td><td class="mono" style="font-size:11.5px;color:#8b949e">RegSetValueExA, RegCreateKeyExA, CryptEncrypt, CryptDecrypt</td><td>4</td></tr></tbody>
+  </table>
+
+  <h2>Findings (13)</h2>
+  <div class="finding" style="border-color:#f85149"><span class="score">+45</span><div class="rule" style="color:#f85149">injection_triad</div><div class="detail">complete process-injection sequence present — alloc(virtualallocex) → write(writeprocessmemory) → execute(createremotethread)</div></div><div class="finding" style="border-color:#f0883e"><span class="score">+35</span><div class="rule" style="color:#f0883e">writable_executable_section</div><div class="detail">1 section(s) marked W+X: UPX0 — violates W^X and is a strong shellcode indicator</div></div><div class="finding" style="border-color:#f0883e"><span class="score">+30</span><div class="rule" style="color:#f0883e">packer_section_name</div><div class="detail">sections named after known packer(s): UPX</div></div><div class="finding" style="border-color:#f0883e"><span class="score">+28</span><div class="rule" style="color:#f0883e">high_entropy_sections</div><div class="detail">1 section(s) near-maximum entropy — packed or encrypted: UPX0 (7.98)</div></div><div class="finding" style="border-color:#f0883e"><span class="score">+25</span><div class="rule" style="color:#f0883e">large_overlay</div><div class="detail">24,576 bytes appended after the last section (62% of the file) — can hide an embedded payload</div></div><div class="finding" style="border-color:#d29922"><span class="score">+22</span><div class="rule" style="color:#d29922">misleading_section_name</div><div class="detail">section(s) named like document types: .txt</div></div><div class="finding" style="border-color:#d29922"><span class="score">+20</span><div class="rule" style="color:#d29922">zeroed_timestamp</div><div class="detail">compile timestamp is zero — header likely tampered with or synthesised</div></div><div class="finding" style="border-color:#d29922"><span class="score">+18</span><div class="rule" style="color:#d29922">imports:memory_manipulation</div><div class="detail">2 API(s): VirtualAllocEx, WriteProcessMemory</div></div><div class="finding" style="border-color:#d29922"><span class="score">+18</span><div class="rule" style="color:#d29922">imports:anti_debugging_evasion</div><div class="detail">2 API(s): IsDebuggerPresent, CheckRemoteDebuggerPresent</div></div><div class="finding" style="border-color:#d29922"><span class="score">+18</span><div class="rule" style="color:#d29922">imports:cryptography</div><div class="detail">2 API(s): CryptEncrypt, CryptDecrypt</div></div><div class="finding" style="border-color:#d29922"><span class="score">+13</span><div class="rule" style="color:#d29922">imports:thread_injection</div><div class="detail">1 API(s): CreateRemoteThread</div></div><div class="finding" style="border-color:#d29922"><span class="score">+13</span><div class="rule" style="color:#d29922">imports:execution_shell</div><div class="detail">1 API(s): WinExec</div></div><div class="finding" style="border-color:#58a6ff"><span class="score">+8</span><div class="rule" style="color:#58a6ff">unsigned</div><div class="detail">no Authenticode certificate — publisher cannot be verified</div></div>
+
+  <footer>Generated by pe-analyzer · static analysis only — indicators are not
+    proof of malice · authorised examination only</footer>
+</div>
+</body>
+</html>
