@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "tool": "pe-analyzer",
+    "version": "1.0.0",
+    "generated": "2026-09-18T05:51:20Z",
+    "target": "/home/user/pe-analyzer/examples/samples/suspicious.exe",
+    "files_analysed": 1
+  },
+  "reports": [
+    {
+      "file": "examples/samples/suspicious.exe",
+      "analysis": {
+        "findings": [
+          {
+            "rule": "injection_triad",
+            "score": 45,
+            "detail": "complete process-injection sequence present \u2014 alloc(virtualallocex) \u2192 write(writeprocessmemory) \u2192 execute(createremotethread)",
+            "severity": "critical"
+          },
+          {
+            "rule": "writable_executable_section",
+            "score": 35,
+            "detail": "1 section(s) marked W+X: UPX0 \u2014 violates W^X and is a strong shellcode indicator",
+            "severity": "high"
+          },
+          {
+            "rule": "packer_section_name",
+            "score": 30,
+            "detail": "sections named after known packer(s): UPX",
+            "severity": "high"
+          },
+          {
+            "rule": "high_entropy_sections",
+            "score": 28,
+            "detail": "1 section(s) near-maximum entropy \u2014 packed or encrypted: UPX0 (7.98)",
+            "severity": "high"
+          },
+          {
+            "rule": "large_overlay",
+            "score": 25,
+            "detail": "24,576 bytes appended after the last section (62% of the file) \u2014 can hide an embedded payload",
+            "severity": "high"
+          },
+          {
+            "rule": "misleading_section_name",
+            "score": 22,
+            "detail": "section(s) named like document types: .txt",
+            "severity": "medium"
+          },
+          {
+            "rule": "zeroed_timestamp",
+            "score": 20,
+            "detail": "compile timestamp is zero \u2014 header likely tampered with or synthesised",
+            "severity": "medium"
+          },
+          {
+            "rule": "imports:memory_manipulation",
+            "score": 18,
+            "detail": "2 API(s): VirtualAllocEx, WriteProcessMemory",
+            "severity": "medium"
+          },
+          {
+            "rule": "imports:anti_debugging_evasion",
+            "score": 18,
+            "detail": "2 API(s): IsDebuggerPresent, CheckRemoteDebuggerPresent",
+            "severity": "medium"
+          },
+          {
+            "rule": "imports:cryptography",
+            "score": 18,
+            "detail": "2 API(s): CryptEncrypt, CryptDecrypt",
+            "severity": "medium"
+          },
+          {
+            "rule": "imports:thread_injection",
+            "score": 13,
+            "detail": "1 API(s): CreateRemoteThread",
+            "severity": "medium"
+          },
+          {
+            "rule": "imports:execution_shell",
+            "score": 13,
+            "detail": "1 API(s): WinExec",
+            "severity": "medium"
+          },
+          {
+            "rule": "unsigned",
+            "score": 8,
+            "detail": "no Authenticode certificate \u2014 publisher cannot be verified",
+            "severity": "low"
+          }
+        ],
+        "score": 293,
+        "verdict": "likely_malicious",
+        "error": null
+      },
+      "parsed": {
+        "valid": true,
+        "error": null,
+        "machine": "x86 (32-bit)",
+        "is_64bit": false,
+        "is_dll": false,
+        "file_size": 39424,
+        "entry_point": 4096,
+        "image_base": 4194304,
+        "subsystem": "Windows Console",
+        "timestamp": 0,
+        "link_time": null,
+        "has_certificate": false,
+        "overlay_size": 24576,
+        "is_dotnet": false,
+        "sections": [
+          {
+            "name": "UPX0",
+            "virtual_address": 4096,
+            "virtual_size": 8192,
+            "raw_size": 8192,
+            "entropy": 7.977,
+            "flags": [
+              "CODE",
+              "EXECUTABLE",
+              "READ",
+              "WRITE"
+            ],
+            "is_wx": true
+          },
+          {
+            "name": ".text",
+            "virtual_address": 12288,
+            "virtual_size": 503,
+            "raw_size": 512,
+            "entropy": 0.189,
+            "flags": [
+              "CODE",
+              "EXECUTABLE",
+              "READ"
+            ],
+            "is_wx": false
+          },
+          {
+            "name": ".txt",
+            "virtual_address": 16384,
+            "virtual_size": 600,
+            "raw_size": 1024,
+            "entropy": 2.848,
+            "flags": [
+              "INITIALIZED_DATA",
+              "READ",
+              "WRITE"
+            ],
+            "is_wx": false
+          },
+          {
+            "name": ".idata",
+            "virtual_address": 20480,
+            "virtual_size": 4096,
+            "raw_size": 4096,
+            "entropy": 0.839,
+            "flags": [
+              "INITIALIZED_DATA",
+              "READ"
+            ],
+            "is_wx": false
+          }
+        ],
+        "imports": [
+          {
+            "dll": "KERNEL32.dll",
+            "functions": [
+              "VirtualAllocEx",
+              "WriteProcessMemory",
+              "CreateRemoteThread",
+              "IsDebuggerPresent",
+              "CheckRemoteDebuggerPresent",
+              "WinExec",
+              "ShellExecuteA",
+              "InternetOpenA",
+              "InternetConnectA",
+              "HttpSendRequestA",
+              "CreateServiceA",
+              "OpenSCManagerA"
+            ]
+          },
+          {
+            "dll": "ADVAPI32.dll",
+            "functions": [
+              "RegSetValueExA",
+              "RegCreateKeyExA",
+              "CryptEncrypt",
+              "CryptDecrypt"
+            ]
+          }
+        ],
+        "exports": []
+      }
+    }
+  ]
+}
