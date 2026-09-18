@@ -1,0 +1,95 @@
+<svg width="1044" height="1636" viewBox="0 0 1044 1636" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#161b22"/><stop offset="100%" stop-color="#0d1117"/>
+</linearGradient></defs>
+<rect width="1044" height="1636" rx="10" fill="url(#bg)" stroke="#30363d"/>
+<rect width="1044" height="36" rx="10" fill="#21262d"/>
+<rect y="26" width="1044" height="10" fill="#21262d"/>
+<line x1="0" y1="36" x2="1044" y2="36" stroke="#30363d"/>
+<circle cx="19" cy="18" r="5.5" fill="#ff5f57"/>
+<circle cx="38" cy="18" r="5.5" fill="#febc2e"/>
+<circle cx="57" cy="18" r="5.5" fill="#28c840"/>
+<text x="522.0" y="23" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11.5" fill="#8b949e">python cli.py analyze examples/samples/suspicious.exe</text>
+<text x="20" y="58" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="77" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  ┌───────────────────────────────────────────────────────────┐</text>
+<text x="20" y="96" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  │  pe-analyzer                                              │</text>
+<text x="20" y="115" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  │  static PE analysis  ·  headers · sections · imports      │</text>
+<text x="20" y="134" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  └───────────────────────────────────────────────────────────┘</text>
+<text x="20" y="153" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="172" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="191" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="210" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  PE ANALYZER  ·  static analysis report</text>
+<text x="20" y="229" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="248" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  File      examples/samples/suspicious.exe</text>
+<text x="20" y="267" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Size      39,424 bytes</text>
+<text x="20" y="286" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f85149">  Verdict   ✖ LIKELY_MALICIOUS   score 293</text>
+<text x="20" y="305" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="324" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="343" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  HEADERS</text>
+<text x="20" y="362" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="381" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Type        Executable · PE32 (32-bit)</text>
+<text x="20" y="400" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Machine     x86 (32-bit)</text>
+<text x="20" y="419" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Subsystem   Windows Console</text>
+<text x="20" y="438" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Entry point 0x00001000</text>
+<text x="20" y="457" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Image base  0x00400000</text>
+<text x="20" y="476" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Timestamp   None  (implausible)</text>
+<text x="20" y="495" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Signed      no</text>
+<text x="20" y="514" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Flags       overlay 24,576 B</text>
+<text x="20" y="533" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="552" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="571" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  SECTIONS</text>
+<text x="20" y="590" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="609" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Name          Virtual       Raw  Entropy  Flags</text>
+<text x="20" y="628" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f85149">  UPX0       0x00001000     8,192     7.98  CODE/EXECUTABLE/READ/WRITE W+X</text>
+<text x="20" y="647" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  .text      0x00003000       512     0.19  CODE/EXECUTABLE/READ</text>
+<text x="20" y="666" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  .txt       0x00004000     1,024     2.85  INITIALIZED_DATA/READ/WRITE</text>
+<text x="20" y="685" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  .idata     0x00005000     4,096     0.84  INITIALIZED_DATA/READ</text>
+<text x="20" y="704" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="723" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="742" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  IMPORTS  ·  2 DLL(s), 16 function(s)</text>
+<text x="20" y="761" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="780" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  KERNEL32.dll  (12)</text>
+<text x="20" y="799" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      VirtualAllocEx, WriteProcessMemory, CreateRemoteThread, IsDebuggerPresent</text>
+<text x="20" y="818" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      CheckRemoteDebuggerPresent, WinExec, ShellExecuteA, InternetOpenA</text>
+<text x="20" y="837" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      InternetConnectA, HttpSendRequestA, CreateServiceA, OpenSCManagerA</text>
+<text x="20" y="856" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  ADVAPI32.dll  (4)</text>
+<text x="20" y="875" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      RegSetValueExA, RegCreateKeyExA, CryptEncrypt, CryptDecrypt</text>
+<text x="20" y="894" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="913" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="932" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">  FINDINGS  ·  13</text>
+<text x="20" y="951" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="970" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f85149">  [critical] injection_triad  +45</text>
+<text x="20" y="989" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      complete process-injection sequence present — alloc(virtualallocex) → write(writeprocessmemory) → execute(createremotethread)</text>
+<text x="20" y="1008" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f0883e">  [high]     writable_executable_section  +35</text>
+<text x="20" y="1027" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f85149">      1 section(s) marked W+X: UPX0 — violates W^X and is a strong shellcode indicator</text>
+<text x="20" y="1046" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f0883e">  [high]     packer_section_name  +30</text>
+<text x="20" y="1065" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      sections named after known packer(s): UPX</text>
+<text x="20" y="1084" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f0883e">  [high]     high_entropy_sections  +28</text>
+<text x="20" y="1103" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      1 section(s) near-maximum entropy — packed or encrypted: UPX0 (7.98)</text>
+<text x="20" y="1122" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f0883e">  [high]     large_overlay  +25</text>
+<text x="20" y="1141" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      24,576 bytes appended after the last section (62% of the file) — can hide an embedded payload</text>
+<text x="20" y="1160" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   misleading_section_name  +22</text>
+<text x="20" y="1179" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      section(s) named like document types: .txt</text>
+<text x="20" y="1198" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   zeroed_timestamp  +20</text>
+<text x="20" y="1217" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      compile timestamp is zero — header likely tampered with or synthesised</text>
+<text x="20" y="1236" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   imports:memory_manipulation  +18</text>
+<text x="20" y="1255" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      2 API(s): VirtualAllocEx, WriteProcessMemory</text>
+<text x="20" y="1274" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   imports:anti_debugging_evasion  +18</text>
+<text x="20" y="1293" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      2 API(s): IsDebuggerPresent, CheckRemoteDebuggerPresent</text>
+<text x="20" y="1312" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   imports:cryptography  +18</text>
+<text x="20" y="1331" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      2 API(s): CryptEncrypt, CryptDecrypt</text>
+<text x="20" y="1350" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   imports:thread_injection  +13</text>
+<text x="20" y="1369" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      1 API(s): CreateRemoteThread</text>
+<text x="20" y="1388" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#d29922">  [medium]   imports:execution_shell  +13</text>
+<text x="20" y="1407" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      1 API(s): WinExec</text>
+<text x="20" y="1426" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#58a6ff">  [low]      unsigned  +8</text>
+<text x="20" y="1445" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">      no Authenticode certificate — publisher cannot be verified</text>
+<text x="20" y="1464" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="1483" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="1502" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#f85149">  LIKELY_MALICIOUS — Multiple high-confidence indicators present.</text>
+<text x="20" y="1521" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  Static analysis only: indicators are not proof. Confirm in an isolated VM.</text>
+<text x="20" y="1540" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#0ea5e9">──────────────────────────────────────────────────────────────────────</text>
+<text x="20" y="1559" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+<text x="20" y="1578" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9">  1 file(s) analysed in 0.00s · 1 flagged</text>
+<text x="20" y="1597" xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#c9d1d9"></text>
+</svg>
